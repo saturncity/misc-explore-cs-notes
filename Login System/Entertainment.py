@@ -4,7 +4,7 @@ class Window:
         self.frame = Tk()
         self.frame.geometry("920x420")
         self.frame.title("The truth")
-        self.lbl_message = Label(text="Allen Sucks", bg="aquamarine1", fg="black")
+        self.lbl_message = Label(text="Hello, world", bg="aquamarine1", fg="black")
         self.lbl_message.pack()
 
     def run(self):

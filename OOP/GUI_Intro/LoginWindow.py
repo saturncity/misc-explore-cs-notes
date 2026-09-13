@@ -1,5 +1,8 @@
+from pathlib import Path
 from tkinter import *
 from OOP.User_Model import User
+
+HERE = Path(__file__).parent
 
 class Login:
     def __init__(self):
@@ -29,7 +32,7 @@ class Login:
         self.label_status = Label(text="Please Press Login Above")
         self.label_status.pack()
 
-        self.read_file("C:/Users/Jason Aaren Lenz/pycharmProjects/ExpCS/Login System/accounts.txt")
+        self.read_file(HERE.parent.parent / "Login System" / "accounts.txt")
 
     def run(self):
         self.frame.mainloop()

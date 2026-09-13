@@ -1,5 +1,8 @@
+from pathlib import Path
 from tkinter import *
 from OOP.User_Model import User
+
+HERE = Path(__file__).parent
 
 
 class Login:
@@ -37,11 +40,11 @@ class Login:
         self.label_status = Label(self.current_window, text="Please Press Login Above")
         self.label_status.pack() # t
 
-        self.img = PhotoImage(file="C:/Users/Jason Aaren Lenz/pycharmProjects/ExpCS/OOP/GUI_Intro/python.png")
+        self.img = PhotoImage(file=HERE / "python.png")
         self.label_image = Label(self.current_window, image=self.img)
         self.label_image.pack()
 
-        self.read_file("C:/Users/Jason Aaren Lenz/pycharmProjects/ExpCS/OOP/accounts.txt")
+        self.read_file(HERE.parent / "accounts.txt")
 
     def open_converter(self):
         Converter(self.root)
@@ -183,7 +186,7 @@ class Cat:
         self.current_window.configure(bg="black")
         self.current_window.title("Cat Memez")
 
-        photo = PhotoImage(file="python.png")
+        photo = PhotoImage(file=HERE / "python.png")
 
         self.label_image = Label(self.current_window,
                       text="bro, do you even code?",
